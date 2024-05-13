@@ -49,9 +49,13 @@ public class Window extends Canvas {
         g.drawLine(640, 360, 640+a1, b1+360);
         g.drawLine((640+a1), (b1+360), (640+a1)+deltaa1, (b1+360) + deltab1);
         g.drawLine((640+a1)+deltaa1, (b1+360) + deltab1, (640+a1)+deltaa1+deltaa12, (b1+360) + deltab1+deltab12);
-        i+=0.1;
-        j+=0.5;
-        k+=0.25;
+
+        g.drawString("Rad long arm: "+Vector2D.theta1, 0, 100);
+        g.drawString("Magnitude: "+Vector2D.magnitude(i, 200), 0, 120);
+        g.drawString("Proj: "+(Vector2D.magnitude(i, 200)*Math.cos(Vector2D.theta1)), 0, 140);
+        i+=0.0025;
+        j+=0.0125;
+        k+=0.00625;
         g.dispose();
         bs.show();
     }
